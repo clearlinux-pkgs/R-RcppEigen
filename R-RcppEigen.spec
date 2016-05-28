@@ -4,15 +4,13 @@
 #
 Name     : R-RcppEigen
 Version  : 0.3.2.8.1
-Release  : 30
+Release  : 31
 URL      : http://cran.r-project.org/src/contrib/RcppEigen_0.3.2.8.1.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/RcppEigen_0.3.2.8.1.tar.gz
 Summary  : 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
 Group    : Development/Tools
 License  : GPL-2.0+ MPL-2.0
 Requires: R-RcppEigen-lib
-Requires: R-Rcpp
-BuildRequires : R-Rcpp
 BuildRequires : clr-R-helpers
 
 %description
@@ -36,6 +34,8 @@ lib components for the R-RcppEigen package.
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
