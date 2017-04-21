@@ -4,7 +4,7 @@
 #
 Name     : R-RcppEigen
 Version  : 0.3.2.9.1
-Release  : 41
+Release  : 42
 URL      : http://cran.r-project.org/src/contrib/RcppEigen_0.3.2.9.1.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/RcppEigen_0.3.2.9.1.tar.gz
 Summary  : 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
@@ -32,12 +32,15 @@ lib components for the R-RcppEigen package.
 %setup -q -c -n RcppEigen
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1489601306
+export SOURCE_DATE_EPOCH=1492801884
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1489601306
+export SOURCE_DATE_EPOCH=1492801884
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -53,7 +56,7 @@ R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library RcppEigen
 
@@ -66,6 +69,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/RcppEigen/INDEX
 /usr/lib64/R/library/RcppEigen/LICENSE
 /usr/lib64/R/library/RcppEigen/Meta/Rd.rds
+/usr/lib64/R/library/RcppEigen/Meta/features.rds
 /usr/lib64/R/library/RcppEigen/Meta/hsearch.rds
 /usr/lib64/R/library/RcppEigen/Meta/links.rds
 /usr/lib64/R/library/RcppEigen/Meta/nsInfo.rds
