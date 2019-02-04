@@ -4,15 +4,16 @@
 #
 Name     : R-RcppEigen
 Version  : 0.3.3.5.0
-Release  : 68
+Release  : 69
 URL      : https://cran.r-project.org/src/contrib/RcppEigen_0.3.3.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppEigen_0.3.3.5.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
 Group    : Development/Tools
 License  : GPL-2.0+ MPL-2.0
 Requires: R-RcppEigen-lib = %{version}-%{release}
-Requires: R-Rcpp
+Requires: R-inline
 BuildRequires : R-Rcpp
+BuildRequires : R-inline
 BuildRequires : buildreq-R
 BuildRequires : eigen-dev
 
@@ -36,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549257644
+export SOURCE_DATE_EPOCH=1549273609
 
 %install
-export SOURCE_DATE_EPOCH=1549257644
+export SOURCE_DATE_EPOCH=1549273609
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
