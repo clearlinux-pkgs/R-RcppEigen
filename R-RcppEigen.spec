@@ -4,14 +4,13 @@
 #
 Name     : R-RcppEigen
 Version  : 0.3.3.5.0
-Release  : 71
+Release  : 72
 URL      : https://cran.r-project.org/src/contrib/RcppEigen_0.3.3.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppEigen_0.3.3.5.0.tar.gz
 Summary  : 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
 Group    : Development/Tools
 License  : GPL-2.0+ MPL-2.0
 Requires: R-RcppEigen-lib = %{version}-%{release}
-Requires: R-inline
 BuildRequires : R-Rcpp
 BuildRequires : R-inline
 BuildRequires : buildreq-R
@@ -37,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549273609
+export SOURCE_DATE_EPOCH=1552795133
 
 %install
-export SOURCE_DATE_EPOCH=1549273609
+export SOURCE_DATE_EPOCH=1552795133
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -76,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library RcppEigen|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  RcppEigen || :
 
 
 %files
@@ -598,11 +596,11 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/RcppEigen/include/unsupported/Eigen/src/Splines/Spline.h
 /usr/lib64/R/library/RcppEigen/include/unsupported/Eigen/src/Splines/SplineFitting.h
 /usr/lib64/R/library/RcppEigen/include/unsupported/Eigen/src/Splines/SplineFwd.h
-/usr/lib64/R/library/RcppEigen/libs/symbols.rds
 /usr/lib64/R/library/RcppEigen/skeleton/Makevars
 /usr/lib64/R/library/RcppEigen/skeleton/Makevars.win
 /usr/lib64/R/library/RcppEigen/skeleton/rcppeigen_hello_world.Rd
 /usr/lib64/R/library/RcppEigen/skeleton/rcppeigen_hello_world.cpp
+/usr/lib64/R/library/RcppEigen/tests/doRUnit.R
 /usr/lib64/R/library/RcppEigen/unitTests/runTests.R
 /usr/lib64/R/library/RcppEigen/unitTests/runit.RcppEigen.R
 /usr/lib64/R/library/RcppEigen/unitTests/runit.fastLm.R
