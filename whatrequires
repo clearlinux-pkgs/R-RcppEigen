@@ -1,8 +1,9 @@
 # This file contains recursive sources that require this package
 R-BayesFactor
 R-ClustVarLV
+R-StanHeaders
 R-lme4
 R-ranger
+R-robCompositions
 R-rstan
 R-rstanarm
-R-treatSens
