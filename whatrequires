@@ -2,6 +2,7 @@
 R-BayesFactor
 R-ClustVarLV
 R-StanHeaders
+R-glmnet
 R-lme4
 R-ranger
 R-robCompositions
