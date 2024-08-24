@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : R-RcppEigen
-Version  : 0.3.4.0.1
-Release  : 113
-URL      : https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.1.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.1.tar.gz
+Version  : 0.3.4.0.2
+Release  : 114
+URL      : https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.2.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.2.tar.gz
 Summary  : 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
 Group    : Development/Tools
 License  : GPL-2.0+ MPL-2.0
@@ -75,10 +75,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1723819888
+export SOURCE_DATE_EPOCH=1724486182
 
 %install
-export SOURCE_DATE_EPOCH=1723819888
+export SOURCE_DATE_EPOCH=1724486182
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-RcppEigen
 cp %{_builddir}/RcppEigen/LICENSE %{buildroot}/usr/share/package-licenses/R-RcppEigen/3df4abd6263d678793bb386369f1b8ecd449ab96 || :
