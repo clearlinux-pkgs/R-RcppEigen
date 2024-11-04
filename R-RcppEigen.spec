@@ -7,7 +7,7 @@
 #
 Name     : R-RcppEigen
 Version  : 0.3.4.0.2
-Release  : 114
+Release  : 115
 URL      : https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/RcppEigen_0.3.4.0.2.tar.gz
 Summary  : 'Rcpp' Integration for the 'Eigen' Templated Linear Algebra
